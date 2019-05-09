@@ -13,25 +13,25 @@ import javax.validation.constraints.Positive;
 @Entity
 public class MeterRead {
     @Id
-    @NotNull()
-    @Positive()
+    @NotNull(message = "The account number must be specified")
+    @Positive(message = "The account number must be positive")
     private Long accountNumber;
 
-    @NotNull()
-    @Min(100000L)
-    @Max(9999999999L)
+    @NotNull(message = "The gas id must be specified")
+    @Min(value = 100000L, message = "The gas id must contain at least 6 digits")
+    @Max(value = 9999999999L, message = "The gas id must contain at most 10 digits")
     private Long gasId;
 
-    @NotNull()
-    @Min(1000000000000L)
-    @Max(9999999999999L)
+    @NotNull(message = "The electricity id must be specified")
+    @Min(value = 1000000000000L, message = "The electricity id must contain 13 digits")
+    @Max(value = 9999999999999L, message = "The electricity id must contain 13 digits")
     private Long elecId;
 
-    @NotNull()
-    @Positive()
+    @NotNull(message = "The electricity reading must be specified")
+    @Positive(message = "The electricity reading must be positive")
     private Long elecSmartRead;
 
-    @NotNull()
-    @Positive()
+    @NotNull(message = "The gas reading must be specified")
+    @Positive(message = "The gas reading must be positive")
     private Long gasSmartRead;
 }
