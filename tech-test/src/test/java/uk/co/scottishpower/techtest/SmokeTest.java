@@ -7,10 +7,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class TechTestApplicationTests {
-
-	@Test
-	public void contextLoads() {
-	}
-
+public class SmokeTest {
+    @Test
+    public void contextLoads() {
+    }
 }
