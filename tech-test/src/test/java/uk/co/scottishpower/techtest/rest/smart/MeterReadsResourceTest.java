@@ -1,4 +1,4 @@
-package uk.co.scottishpower.techtest.rest;
+package uk.co.scottishpower.techtest.rest.smart;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,7 +26,7 @@ public class MeterReadsResourceTest {
 
     @Test
     public void givenAValidAccountNumber_whenRetrievingReads_thenTheCorrectReadsAreReturnedAsJson() {
-        String url = getUrl(METER_READS_PATH + 123);
+        String url = getUrl(METER_READS_PATH + 39800);
 
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
         assertEquals(HttpStatus.OK, response.getStatusCode());
