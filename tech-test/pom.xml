@@ -12,7 +12,7 @@
 
     <groupId>uk.co.scottishpower</groupId>
     <artifactId>tech-test</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0</version>
 
     <name>tech-test</name>
     <description>Scottish Power Java Technical Test</description>
