@@ -30,7 +30,7 @@ public class MeterReadsResourceTest {
 
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertNotNull(response.getBody());
+        assertEquals("{\"elecSmartRead\":9174,\"gasSmartRead\":50785}", response.getBody());
     }
 
     @Test
